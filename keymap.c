@@ -354,4 +354,10 @@ static void set_rgb_scroll_leds_off() {
         rgb_matrix_set_color(72, 0, 0, 0); // Under Rotary (HOME)
 }
 
+static void set_rgb_velocikey_leds_on(){
+  // Create an RGB toggle to indicate velocikey is on
+
+
+
+}
 #endif // RGB_MATRIX_ENABLE
