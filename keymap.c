@@ -338,34 +338,4 @@ static void set_rgb_scroll_leds_on() {
 static void set_rgb_scroll_leds_off() { 
         rgb_matrix_set_color(72, 0, 0, 0); // Under Rotary (HOME)
 }
-
-static void set_rgb_velocikey_leds_on(){
-  // Create an RGB toggle to indicate velocikey is on
-        rgb_matrix_set_color(9, 255, 255, 255);         //LED A 9
-        rgb_matrix_set_color(15, 255, 255, 255);        //LED S 15
-        rgb_matrix_set_color(21, 255, 255, 255);        //LED D 21
-        rgb_matrix_set_color(26, 255, 255, 255);        //LED F 26
-        rgb_matrix_set_color(31, 255, 255, 255);        //LED G 31
-        rgb_matrix_set_color(37, 255, 255, 255);        //LED H 37
-        rgb_matrix_set_color(42, 255, 255, 255);        //LED J 42
-        rgb_matrix_set_color(47, 255, 255, 255);        //LED K 47
-        rgb_matrix_set_color(53, 255, 255, 255);        //LED L 53
-        rgb_matrix_set_color(59, 255, 255, 255);        //LED ; 59
-        rgb_matrix_set_color(64, 255, 255, 255);        //LED ' 64
-}
-
-static void set_rgb_velocikey_leds_off(){
-  // Create an RGB toggle to indicate velocikey is on
-        rgb_matrix_set_color(9, 0,0,0);         //LED A 9
-        rgb_matrix_set_color(15, 0, 0, 0);        //LED S 15
-        rgb_matrix_set_color(21, 0, 0, 0);        //LED D 21
-        rgb_matrix_set_color(26, 0, 0, 0);        //LED F 26
-        rgb_matrix_set_color(31, 0, 0, 0);        //LED G 31
-        rgb_matrix_set_color(37, 0, 0, 0);        //LED H 37
-        rgb_matrix_set_color(42, 0, 0, 0);        //LED J 42
-        rgb_matrix_set_color(47, 0, 0, 0);        //LED K 47
-        rgb_matrix_set_color(53, 0, 0, 0);        //LED L 53
-        rgb_matrix_set_color(59, 0, 0, 0);        //LED ; 59
-        rgb_matrix_set_color(64, 0, 0, 0);        //LED ' 64
-}
 #endif // RGB_MATRIX_ENABLE
