@@ -339,6 +339,7 @@ static void set_rgb_scroll_leds_off() {
         rgb_matrix_set_color(72, 0, 0, 0); // Under Rotary (HOME)
 }
 
+// Add velocikey indicator to above RGB layer
 static void set_rgb_velocikey_leds_on(){
   // Create an RGB toggle to indicate velocikey is on
         rgb_matrix_set_color(9, 255, 255, 255);         //LED A 9
