@@ -16,22 +16,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
-enum my_keycodes {
-  LED_TILDE = SAFE_RANGE,
-  LED_1,
-  LED_2,
-  LED_3,
-  LED_4,
-  LED_5,
-  LED_6,
-  LED_7,
-  LED_8,
-  LED_9,
-  LED_0,
-  LED_MINS,
-  LED_EQL,
-  QMKBEST
-};
+enum my_keycodes { LED_TILDE = SAFE_RANGE, LED_1, LED_2, LED_3, LED_4, LED_5, LED_6, LED_7, LED_8, LED_9, LED_0, LED_MINS, LED_EQL, QMKBEST };
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -76,9 +61,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [2] = LAYOUT(
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
-        _______, _______, KC_1,    KC_2,    KC_3,    _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
+        _______, _______, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, _______, _______, _______, _______, _______,          _______,
         _______, _______, KC_4,    KC_5,    KC_6,    _______, _______, _______, _______, _______, _______, _______,          _______,          _______,
-        _______,          _______, KC_7,    KC_8,    KC_9,    _______, _______, _______, _______, _______, _______,          _______, _______, _______,
+        _______,          _______, KC_1,    KC_2,    KC_3,    _______, _______, _______, _______, _______, _______,          _______, _______, _______,
         _______, _______, _______,                            _______,                            _______, _______, _______, _______, _______, _______
     ),
 
@@ -356,8 +341,31 @@ static void set_rgb_scroll_leds_off() {
 
 static void set_rgb_velocikey_leds_on(){
   // Create an RGB toggle to indicate velocikey is on
+        rgb_matrix_set_color(9, 255, 255, 255);         //LED A 9
+        rgb_matrix_set_color(15, 255, 255, 255);        //LED S 15
+        rgb_matrix_set_color(21, 255, 255, 255);        //LED D 21
+        rgb_matrix_set_color(26, 255, 255, 255);        //LED F 26
+        rgb_matrix_set_color(31, 255, 255, 255);        //LED G 31
+        rgb_matrix_set_color(37, 255, 255, 255);        //LED H 37
+        rgb_matrix_set_color(42, 255, 255, 255);        //LED J 42
+        rgb_matrix_set_color(47, 255, 255, 255);        //LED K 47
+        rgb_matrix_set_color(53, 255, 255, 255);        //LED L 53
+        rgb_matrix_set_color(59, 255, 255, 255);        //LED ; 59
+        rgb_matrix_set_color(64, 255, 255, 255);        //LED ' 64
+}
 
-
-
+static void set_rgb_velocikey_leds_off(){
+  // Create an RGB toggle to indicate velocikey is on
+        rgb_matrix_set_color(9, 0,0,0);         //LED A 9
+        rgb_matrix_set_color(15, 0, 0, 0);        //LED S 15
+        rgb_matrix_set_color(21, 0, 0, 0);        //LED D 21
+        rgb_matrix_set_color(26, 0, 0, 0);        //LED F 26
+        rgb_matrix_set_color(31, 0, 0, 0);        //LED G 31
+        rgb_matrix_set_color(37, 0, 0, 0);        //LED H 37
+        rgb_matrix_set_color(42, 0, 0, 0);        //LED J 42
+        rgb_matrix_set_color(47, 0, 0, 0);        //LED K 47
+        rgb_matrix_set_color(53, 0, 0, 0);        //LED L 53
+        rgb_matrix_set_color(59, 0, 0, 0);        //LED ; 59
+        rgb_matrix_set_color(64, 0, 0, 0);        //LED ' 64
 }
 #endif // RGB_MATRIX_ENABLE
